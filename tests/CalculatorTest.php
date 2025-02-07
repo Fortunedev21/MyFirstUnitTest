@@ -1,14 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 require_once './app/models/Calculator.php';
 
+#[CoversClass(Calculator::class)]
 class CalculatorTest extends TestCase
 {
-    /**
-     * @covers Calculator::add
-     */
     public function testAddition()
     {
         $calculator = new Calculator();
@@ -16,9 +15,6 @@ class CalculatorTest extends TestCase
         $this->assertEquals(0, $calculator->add(-2, 2));
     }
 
-    /**
-     * @covers Calculator::subtract
-     */
     public function testSubtraction()
     {
         $calculator = new Calculator();

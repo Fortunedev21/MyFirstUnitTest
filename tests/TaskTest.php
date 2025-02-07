@@ -1,15 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-//use App\Models\Task;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 require_once './app/models/Task.php';
 
+#[CoversClass(Task::class)]
 class TaskTest extends TestCase
 {
-    /**
-     * @covers Task::addTask
-     */
     public function testAddTask()
     {
         $task = new Task();
@@ -18,9 +16,6 @@ class TaskTest extends TestCase
         $this->assertContains("Faire les courses", $task->getTasks());
     }
 
-    /**
-     * @covers Task::removeTask
-     */
     public function testRemoveTask()
     {
         $task = new Task();
@@ -30,9 +25,6 @@ class TaskTest extends TestCase
         $this->assertNotContains("Coder en PHP", $task->getTasks());
     }
 
-    /**
-     * @covers Task::getTasks
-     */
     public function testGetTasks()
     {
         $task = new Task();

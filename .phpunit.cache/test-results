@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"CalculatorTest::testAddition":0.009,"CalculatorTest::testSubtraction":0.001,"TaskTest::testAddTask":0.002,"TaskTest::testRemoveTask":0.002,"TaskTest::testGetTasks":0}}
+{"version":1,"defects":[],"times":{"CalculatorTest::testAddition":0.494,"CalculatorTest::testSubtraction":0.003,"TaskTest::testAddTask":0.016,"TaskTest::testRemoveTask":0.018,"TaskTest::testGetTasks":0.004}}
